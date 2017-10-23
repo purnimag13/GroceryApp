@@ -1,0 +1,24 @@
+<html>
+<div id="myDIV" class="header">
+  <h2>Grocery List</h2>
+  <input type="text" id="item" placeholder="Enter Item">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+</ul>
+
+<script>
+
+function newElement() 
+{
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("item").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  document.getElementById("myUL").appendChild(li);
+  document.getElementById("myInput").value = "";
+
+}
+</script>
+</html>
